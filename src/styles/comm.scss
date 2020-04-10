@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  height: 0;
+}
+
+@mixin w_h($w: auto, $h: auto) {
+  @if $w != auto {
+    width: #{$w}rpx;
+  } @else {
+    width: auto;
+  }
+  @if $h != auto {
+    height: #{$h}rpx;
+  } @else {
+    height: auto;
+  }
+}
+
+@mixin font($s: 24, $c: #444, $l: 24, $f: 400) {
+  font-size: #{$s}rpx;
+  color: #{$c};
+  line-height: #{$l}rpx;
+  font-weight: #{$f};
+}
+
+@mixin flex($d: column, $j: normal, $a: normal) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+}

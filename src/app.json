@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/index/main",
-    "pages/logs/main",
-    "pages/counter/main"
+    "pages/basic/main",
+    "pages/skill/main",
+    "pages/work/main",
+    "pages/project/main",
+    "pages/contract/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,31 +15,33 @@
   "tabBar": {
     "color": "#999",
     "backgroundColor": "#fafafa",
-    "selectedColor": "#333",
+    "selectedColor": "#1296db",
     "borderStyle": "white",
-
     "list": [{
-      "text": "首页",
-      "pagePath": "pages/index/main",
-      "iconPath": "static/tabs/home.png",
-      "selectedIconPath": "static/tabs/home-active.png"
+      "text": "基本信息",
+      "pagePath": "pages/basic/main",
+      "iconPath": "static/tabs/basic.png",
+      "selectedIconPath": "static/tabs/basic-s.png"
     }, {
-      "text": "订单",
-      "pagePath": "pages/logs/main",
-      "iconPath": "static/tabs/orders.png",
-      "selectedIconPath": "static/tabs/orders-active.png"
-    }],
-
-    "items": [{
-      "name": "首页",
-      "pagePath": "pages/index/main",
-      "icon": "static/tabs/home.png",
-      "activeIcon": "static/tabs/home-active.png"
+      "text": "个人技能",
+      "pagePath": "pages/skill/main",
+      "iconPath": "static/tabs/skill.png",
+      "selectedIconPath": "static/tabs/skill-s.png"
     }, {
-      "name": "订单",
-      "pagePath": "pages/logs/main",
-      "icon": "static/tabs/orders.png",
-      "activeIcon": "static/tabs/orders-active.png"
+      "text": "工作经历",
+      "pagePath": "pages/work/main",
+      "iconPath": "static/tabs/work.png",
+      "selectedIconPath": "static/tabs/work-s.png"
+    }, {
+      "text": "项目经历",
+      "pagePath": "pages/project/main",
+      "iconPath": "static/tabs/project.png",
+      "selectedIconPath": "static/tabs/project-s.png"
+    }, {
+      "text": "联系方式",
+      "pagePath": "pages/contract/main",
+      "iconPath": "static/tabs/contract.png",
+      "selectedIconPath": "static/tabs/contract-s.png"
     }],
     "position": "bottom"
   }
