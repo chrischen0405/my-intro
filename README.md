@@ -1,13 +1,14 @@
 # my-intro
 
-> chenwenjie intro
+我的个人简历小程序，可以微信扫码查看
+
+![小程序码](https://github.com/chrischen0405/my-intro/blob/master/md-img/minicode.jpg)
 
 ## Build Setup
 
 ``` bash
-# 初始化项目
-vue init mpvue/mpvue-quickstart myproject
-cd myproject
+# 添加appid
+需要在project.config.json把appid填上
 
 # 安装依赖
 yarn
@@ -33,5 +34,3 @@ npm build:my
 # 生成 bundle 分析报告
 npm run build --report
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
