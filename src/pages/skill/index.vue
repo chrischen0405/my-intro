@@ -35,7 +35,7 @@
       ul {
         margin: 20rpx;
         li {
-          @include font(32, #444, 42, 400);
+          @include font(28, #444, 40, 400);
           text-align: left;
           margin: 50rpx 20rpx;
         }

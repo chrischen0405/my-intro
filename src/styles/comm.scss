@@ -29,3 +29,14 @@
   justify-content: $j;
   align-items: $a;
 }
+
+button {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 0;
+  line-height: auto;
+}
+button::after {
+  border-radius: 0;
+  border: none;
+}

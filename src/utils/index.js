@@ -18,7 +18,34 @@ export function formatTime (date) {
   return `${t1} ${t2}`
 }
 
+export function showSuccess (text, d = 2000) {
+  mpvue.showToast({
+    title: text,
+    icon: 'success',
+    duration: d
+  })
+}
+
+export function showToast (text, d = 2000) {
+  mpvue.showToast({
+    title: text,
+    icon: 'none',
+    duration: d
+  })
+}
+
+export function showError (text, d = 2000) {
+  mpvue.showToast({
+    title: text,
+    icon: 'error',
+    duration: d
+  })
+}
+
 export default {
   formatNumber,
-  formatTime
+  formatTime,
+  showSuccess,
+  showToast,
+  showError
 }
