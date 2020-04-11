@@ -30,7 +30,8 @@
           }
         })
       }
-    }
+    },
+    onShareAppMessage () {}
   }
 </script>
 

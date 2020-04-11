@@ -18,7 +18,8 @@
 
 <script>
   export default {
-    data: {}
+    data: {},
+    onShareAppMessage () {}
   }
 </script>
 

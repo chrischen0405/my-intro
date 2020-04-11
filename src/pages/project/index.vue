@@ -44,7 +44,8 @@
         work: '毕业设计项目',
         desc: ['前端使用原生微信小程序开发，后端使用springboot+jpa构建项目，使用mysql数据库，使用git进行版本控制。']
       }]
-    }
+    },
+    onShareAppMessage () {}
   }
 </script>
 
