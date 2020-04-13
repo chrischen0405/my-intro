@@ -46,9 +46,9 @@
       },
       initWorkYear () { // 粗略计算工作年限
         let now = (new Date()).getTime()
-        let workDay = (new Date('2019-4-17')).getTime()
-        let days = (now - workDay) / (1000 * 60 * 60 * 24 * 365)
-        this.workYear = Number(days).toFixed(1)
+        let workDay = (new Date('2019/4/17')).getTime()
+        let years = (now - workDay) / (1000 * 60 * 60 * 24 * 365)
+        this.workYear = Number(years).toFixed(1)
       }
     },
     onShareAppMessage () {}
