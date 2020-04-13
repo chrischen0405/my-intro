@@ -7,10 +7,10 @@
     </div>
     <div class="base">
       <div class="box">
-        <p>年龄: 23</p>
+        <p>年龄: {{age}}</p>
         <p>学历: 本科</p>
         <p>所在地: 浙江杭州</p>
-        <p>工作经验: 1年</p>
+        <p>工作经验: {{workYear}}年</p>
         <p>籍贯: 浙江绍兴</p>
         <p>求职意向: 前端开发</p>
       </div>
@@ -20,7 +20,37 @@
 
 <script>
   export default {
-    data: {},
+    data: {
+      age: 0,
+      workYear: 0
+    },
+    created () {
+      this.initAge()
+      this.initWorkYear()
+    },
+    methods: {
+      initAge () { // 计算年龄
+        let date = new Date()
+        let year = date.getFullYear()
+        let month = date.getMonth() + 1
+        let day = date.getDate()
+        if (month > 4) {
+          this.age = year - 1997
+        } else {
+          if (day > 4) {
+            this.age = year - 1997
+          } else {
+            this.age = year - 1998
+          }
+        }
+      },
+      initWorkYear () { // 粗略计算工作年限
+        let now = (new Date()).getTime()
+        let workDay = (new Date('2019-4-17')).getTime()
+        let days = (now - workDay) / (1000 * 60 * 60 * 24 * 365)
+        this.workYear = Number(days).toFixed(1)
+      }
+    },
     onShareAppMessage () {}
   }
 </script>
