@@ -1,7 +1,19 @@
 <template>
   <div class="container">
     <div class="main">
-      <div class="work">
+      <div class="work" style="margin-top: 80rpx">
+        <p class="time">2020.3-至今</p>
+        <div class="header">
+          <p>浙江网新电器科技有限公司</p>
+          <p>前端开发工程师</p>
+        </div>
+        <p class="content">
+          1、根据公司网页版运维管理平台逻辑及接口独立开发运维管理平台安卓APP；<br>
+          2、对公司已有项目前端部分进行功能增加修改；<br>
+          3、和同事一起开发新项目的前端部分功能模块。
+        </p>
+      </div>
+      <div class="work" style="margin-top: 80rpx">
         <p class="time">2019.4-2020.3</p>
         <div class="header">
           <p>杭州兔狗科技有限公司</p>
@@ -57,6 +69,7 @@
         .header {
           margin-top: 40rpx;
           @include flex(row, space-between, center);
+          flex-wrap: wrap;
           p {
             display: inline-block;
             @include font(32, #000, 40, 500);
