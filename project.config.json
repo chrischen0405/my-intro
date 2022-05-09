@@ -9,7 +9,7 @@
     },
     "miniprogramRoot": "dist/wx/",
     "compileType": "miniprogram",
-    "appid": "",
+    "appid": "wxcb89af3c4f708fdb",
     "projectname": "my-intro",
     "condition": {
         "search": {

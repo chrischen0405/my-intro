@@ -1,95 +1,98 @@
 <template>
-  <div class="container">
-    <div class="main">
-      <img src="/static/images/avatar.png"/>
-      <p class="name">陈文杰</p>
-      <p></p>
+    <div class="container">
+        <div class="main">
+            <img src="/static/images/avatar.png"/>
+            <p class="name">陈文杰</p>
+            <p></p>
+        </div>
+        <div class="base">
+            <div class="box">
+                <p>年龄: {{age}}</p>
+                <p>学历: 本科</p>
+                <p>所在地: 浙江杭州</p>
+                <p>工作经验: {{workYear}}年</p>
+                <p>籍贯: 浙江绍兴</p>
+                <p>求职意向: 前端开发</p>
+            </div>
+        </div>
     </div>
-    <div class="base">
-      <div class="box">
-        <p>年龄: {{age}}</p>
-        <p>学历: 本科</p>
-        <p>所在地: 浙江杭州</p>
-        <p>工作经验: {{workYear}}年</p>
-        <p>籍贯: 浙江绍兴</p>
-        <p>求职意向: 前端开发</p>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
-  export default {
-    data: {
-      age: 0,
-      workYear: 0
+export default {
+    data () {
+        return {
+            age: 0,
+            workYear: 0
+        }
     },
     created () {
-      this.initAge()
-      this.initWorkYear()
+        this.initAge()
+        this.initWorkYear()
     },
     methods: {
-      initAge () { // 计算年龄
-        let date = new Date()
-        let year = date.getFullYear()
-        let month = date.getMonth() + 1
-        let day = date.getDate()
-        if (month > 4) {
-          this.age = year - 1997
-        } else {
-          if (day > 4) {
-            this.age = year - 1997
-          } else {
-            this.age = year - 1998
-          }
+        initAge () { // 计算年龄
+            let date = new Date()
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1
+            let day = date.getDate()
+            if (month > 4) {
+                this.age = year - 1997
+            } else {
+                if (day > 4) {
+                    this.age = year - 1997
+                } else {
+                    this.age = year - 1998
+                }
+            }
+        },
+        initWorkYear () { // 粗略计算工作年限
+            let now = (new Date()).getTime()
+            let workDay = (new Date('2019/4/17')).getTime()
+            let years = (now - workDay) / (1000 * 60 * 60 * 24 * 365)
+            this.workYear = Number(years).toFixed(1)
         }
-      },
-      initWorkYear () { // 粗略计算工作年限
-        let now = (new Date()).getTime()
-        let workDay = (new Date('2019/4/17')).getTime()
-        let years = (now - workDay) / (1000 * 60 * 60 * 24 * 365)
-        this.workYear = Number(years).toFixed(1)
-      }
     },
-    onShareAppMessage () {}
-  }
+    onShareAppMessage () {
+    }
+}
 </script>
 
 <style lang="scss" scoped>
-  @import "../../styles/comm";
-  .container {
-    padding-top: 40rpx;
-    width: 750rpx;
-    height: 100%;
-    @include flex(column, flex-start, center);
-    .main {
-      @include w_h(670, 500);
-      @include flex($j: center, $a: center);
-      border-radius: 8rpx;
-      box-shadow: 0 10rpx 20rpx #1296db;
-      img {
-        @include w_h(200, 200);
-        border-radius: 100rpx;
-      }
-      .name {
-        margin-top: 40rpx;
-        text-align: center;
-        @include font(40, #000, 40, 600);
-      }
+@import "../../styles/comm";
+.container {
+  padding-top: 40rpx;
+  width: 750rpx;
+  height: 100%;
+  @include flex(column, flex-start, center);
+  .main {
+    @include w_h(670, 500);
+    @include flex($j: center, $a: center);
+    border-radius: 8rpx;
+    box-shadow: 0 10rpx 20rpx #1296db;
+    img {
+      @include w_h(200, 200);
+      border-radius: 100rpx;
     }
-    .base {
-      margin-top: 80rpx;
-      width: 670rpx;
-      border-radius: 8rpx;
-      box-shadow: 0 10rpx 20rpx #1296db;
-      .box {
-        margin-top: 20rpx;
-        margin-bottom: 20rpx;
-        p {
-          text-align: center;
-          @include font(32, #000, 50, 400);
-        }
+    .name {
+      margin-top: 40rpx;
+      text-align: center;
+      @include font(40, #000, 40, 600);
+    }
+  }
+  .base {
+    margin-top: 80rpx;
+    width: 670rpx;
+    border-radius: 8rpx;
+    box-shadow: 0 10rpx 20rpx #1296db;
+    .box {
+      margin-top: 20rpx;
+      margin-bottom: 20rpx;
+      p {
+        text-align: center;
+        @include font(32, #000, 50, 400);
       }
     }
   }
+}
 </style>
