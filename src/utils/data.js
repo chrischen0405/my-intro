@@ -15,6 +15,7 @@ export const workList = [
         companyName: '浙江网新电气科技有限公司',
         job: '前端开发工程师',
         time: '2020.3-至今',
+        tags: ['Vue', 'uni-app'],
         desc: [
             '1、根据公司网页版运维管理平台逻辑及接口独立开发运维管理平台安卓APP；',
             '2、对公司已有项目前端部分进行功能增加修改；',
@@ -25,6 +26,7 @@ export const workList = [
         companyName: '杭州兔狗科技有限公司',
         job: '前端开发工程师',
         time: '2019.4-2020.3',
+        tags: ['微信小程序', 'Vue', 'jQuery'],
         desc: [
             '1、主要负责公司小程序，移动端网页及app的前端开发和维护；',
             '2、参与公司新产品功能需求的技术评估以及开发；',
@@ -37,6 +39,7 @@ export const workList = [
         companyName: '贝因美婴童食品有限公司',
         job: '前端开发实习生',
         time: '2018.8-2018.12',
+        tags: ['jQuery', 'DIV+CSS', 'JavaScript'],
         desc: [
             '1、主要负责公司微信公众号每月会员活动日h5小游戏的编写；',
             '2、和UI交接素材和后端对接口。'

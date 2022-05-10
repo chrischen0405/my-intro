@@ -2,10 +2,13 @@
     <div class="container">
         <div class="main">
             <div class="work" v-for="(item, index) in list" :key="index">
-                <p class="time">{{item.time}}</p>
+                <p class="title">{{item.companyName}}</p>
                 <div class="header">
-                    <p>{{item.companyName}}</p>
-                    <p>{{item.job}}</p>
+                    <span>{{item.job}}</span>
+                    <span>{{item.time}}</span>
+                </div>
+                <div class="tag-container">
+                    <div class="tag" v-for="(tag, i) in item.tags" :key="i">{{tag}}</div>
                 </div>
                 <p class="content" v-for="(x, i) in item.desc" :key="i">
                     {{x}}
@@ -43,17 +46,29 @@ export default {
         .work {
             margin: 80rpx 40rpx 40rpx 40rpx;
             @include flex(column, flex-start, flex-start);
-            .time {
+            .title {
                 @include font(40, #1296db, 40, 600);
                 text-align: left;
             }
             .header {
+                width: 100%;
                 margin-top: 40rpx;
                 @include flex(row, space-between, center);
                 flex-wrap: wrap;
-                p {
-                    display: inline-block;
-                    @include font(32, #000, 40, 500);
+                span {
+                    @include font(32, #333, 40, 500);
+                }
+            }
+            .tag-container {
+                margin-top: 30rpx;
+                @include flex(row, flex-start, center);
+                flex-wrap: wrap;
+                .tag {
+                    margin-right: 16rpx;
+                    @include font(24, #444, 32);
+                    padding: 4rpx 10rpx;
+                    background-color: #ddd;
+                    border-radius: 6rpx;
                 }
             }
             .content {
