@@ -4,8 +4,8 @@
             <div class="project" v-for="(item, index) in list" :key="index">
                 <p class="name">{{item.name}}</p>
                 <div class="header">
-                    <p>{{item.time}}</p>
-                    <p>{{item.work}}</p>
+                    <span>{{item.work}}</span>
+                    <span>{{item.time}}</span>
                 </div>
                 <div class="content">
                     <p v-for="(s, i) in item.desc" :key="i">{{s}}</p>
@@ -31,36 +31,39 @@ export default {
 
 <style scoped lang="scss">
 @import "../../styles/comm";
+
 .container {
-  padding: 40rpx 0;
-  width: 750rpx;
-  @include flex(column, flex-start, center);
-  .main {
-    width: 670rpx;
-    border-radius: 8rpx;
-    box-shadow: 0 10rpx 20rpx #1296db;
-    .project {
-      margin: 40rpx;
-      @include flex(column, flex-start, flex-start);
-      .name {
-        @include font(40, #1296db, 40, 600);
-        text-align: left;
-      }
-      .header {
-        margin-top: 40rpx;
-        @include flex(row, space-between, center);
-        flex-wrap: wrap;
-        p {
-          display: inline-block;
-          @include font(32, #000, 40, 500);
+    @include w_h(750);
+    padding: 40rpx 0;
+    @include flex(column, flex-start, center);
+    .main {
+        @include w_h(670);
+        border-radius: 8rpx;
+        box-shadow: 0 10rpx 20rpx #1296db;
+        .project {
+            margin: 40rpx;
+            @include flex(column, flex-start, flex-start);
+            .name {
+                @include font(40, #1296db, 40, 600);
+                text-align: left;
+            }
+            .header {
+                width: 100%;
+                margin-top: 40rpx;
+                @include flex(row, space-between, center);
+                flex-wrap: wrap;
+                span {
+                    @include font(32, #333, 40, 500);
+                }
+            }
+            .content {
+                text-align: left;
+                @include font(28, #444, 36, 400);
+                p {
+                    margin-top: 40rpx;
+                }
+            }
         }
-      }
-      .content {
-        margin-top: 40rpx;
-        text-align: left;
-        @include font(28, #444, 36, 400);
-      }
     }
-  }
 }
 </style>
